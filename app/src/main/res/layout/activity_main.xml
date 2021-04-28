@@ -26,17 +26,45 @@
         android:fontFamily="sans-serif-black"
         android:text="0"
         android:textColor="#FFFFFF"
-        android:textSize="104sp"
+        android:textSize="92sp"
+        app:layout_constraintBottom_toTopOf="@id/timeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="TIME"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/timeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="72sp"
         app:layout_constraintBottom_toTopOf="@id/tapButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/countText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tapButton"
         android:layout_width="248dp"
         android:layout_height="248dp"
-        android:background="@drawable/background_circle"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/background_circle_gray"
         android:fontFamily="sans-serif-black"
         android:text="TAP!"
         android:textColor="#FFFFFF"
@@ -44,7 +72,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
+        app:layout_constraintTop_toBottomOf="@id/timeText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startButton"
+        android:layout_width="248dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_corners"
+        android:fontFamily="sans-serif-black"
+        android:text="START"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
